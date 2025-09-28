@@ -35,7 +35,7 @@ class LinkedList {
 
     // Implementación del delete según pseudocódigo
     public Node LinkedListDelete(int index) {
-        // ① Si la lista está vacía
+        //  Si la lista está vacía
         if (head == null) {
             return null;
         }
@@ -61,12 +61,12 @@ class LinkedList {
 
         // Si encontramos el nodo
         if (current != null) {
-            // ⑤ enlazar anterior con el siguiente
+            //  enlazar anterior con el siguiente
             previous.next = current.next;
-            // ⑥ aislar el nodo eliminado
+            //  aislar el nodo eliminado
             current.next = null;
         } else {
-            // ⑦ índice inválido
+            //  índice inválido
             System.out.println("Error: índice inválido.");
         }
 
@@ -101,7 +101,7 @@ public class LinkedListDemo {
         list.LinkedListInsertAfter(previous, newNode);
         list.printList();  // 10->20->30->71->40->50->/
 
-        // 🔹 Eliminar nodo en índice 3 (71)
+        //  Eliminar nodo en índice 3 (71)
         list.LinkedListDelete(3);
         list.printList();  // 10->20->30->40->50->/
     }
