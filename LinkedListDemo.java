@@ -33,14 +33,14 @@ class LinkedList {
         return current;
     }
 
-    // 🔹 Implementación del delete según pseudocódigo
+    // Implementación del delete según pseudocódigo
     public Node LinkedListDelete(int index) {
         // ① Si la lista está vacía
         if (head == null) {
             return null;
         }
 
-        // ② Si queremos eliminar la cabeza
+        //  Si queremos eliminar la cabeza
         if (index == 0) {
             Node new_head = head.next;
             head.next = null;
@@ -52,14 +52,14 @@ class LinkedList {
         Node previous = null;
         int count = 0;
 
-        // ③ Recorrer hasta el índice
+        // Recorrer hasta el índice
         while (count < index && current != null) {
             previous = current;
             current = current.next;
             count = count + 1;
         }
 
-        // ④ Si encontramos el nodo
+        // Si encontramos el nodo
         if (current != null) {
             // ⑤ enlazar anterior con el siguiente
             previous.next = current.next;
